@@ -43,7 +43,7 @@ var addUtterances = () => {
     script.setAttribute("crossorigin", "anonymous");
 
     sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
+    if (sections != null) {
         section = sections[sections.length-1];
         section.appendChild(script);
     }
