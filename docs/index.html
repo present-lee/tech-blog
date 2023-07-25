@@ -42,6 +42,12 @@ var addUtterances = () => {
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
     script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
@@ -186,12 +192,5 @@ allow the build to proceed.</p>
       });
   </script> 
 
-  <script src="https://utteranc.es/client.js"
-        repo="present-lee/tech-blog"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
 </body>
 </html>
